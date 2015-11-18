@@ -1,0 +1,9 @@
+
+<h1><%= @message.title %></h1>
+<p><%= @message.body%></p>
+<%if user_signed_in?%>
+
+<%=link_to "EditMessage", edit_message_path%>
+<%= link_to "Delete", message_path, method: :delete, data: {confirm: "Are you sure?"}%>
+
+<%end%>

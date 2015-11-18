@@ -1,0 +1,7 @@
+<h1>Hi This Is MessageBoard!!</h1>
+<% @messages.each do |message|%>
+<h3><%= message.title%></h3><b>
+<p><%= truncate(message.body, :length => 35)%></p>
+<%= link_to "ReadMe", message%>
+
+<%end%>
